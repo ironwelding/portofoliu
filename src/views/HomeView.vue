@@ -4,7 +4,10 @@
       <div class="abstract-shape"></div>
     </div>
     <nav>
-      <img alt="Vue logo" src="../assets/logo.png" id="logo">
+      <section class="logo-container">
+        <img alt="Vue logo" src="../assets/logo.png" id="logo">
+        <h1>Iron welding</h1>
+      </section>
 
       <div class="info">
         <section>
@@ -35,7 +38,7 @@
     <div class="hero-section">
       <section>
         <h1 class="hero-title">IRON WELDING</h1>
-        <h3 class="hero-subtitle">pentru noi metalul este doar o plastilină, îl modelăm cum vrem</h3>
+        <h3 class="hero-subtitle"><span>pentru</span> noi metalul este doar o plastilină, îl modelăm cum vrem</h3>
       </section>
       <section class="gap-1">
         <p>Suntem <span>experți</span> în meșteșugul metalului</p>
@@ -43,37 +46,42 @@
       </section>
       <section>
         <p class="bold">Ne ocupăm cu:</p>
-        <p class="flx"><span class="circle"></span> automatizări porți:</p>
-        <ul>
-          <li>
-            <span class="material-icons">trending_flat</span>
-            batante
-          </li>
-          <li>
-            <span class="material-icons">trending_flat</span>
-            culisante
-          </li>
-          <li>
-            <span class="material-icons">trending_flat</span>
-            autoportante
-          </li>
-        </ul>
-        <br/>
-        <p class="flx"><span class="circle"></span> sudăm piese din:</p>
-        <ul>
-          <li>
-            <span class="material-icons">trending_flat</span>
-            inox
-          </li>
-          <li>
-            <span class="material-icons">trending_flat</span>
-            fier
-          </li>
-          <li>
-            <span class="material-icons">trending_flat</span>
-            aluminiu
-          </li>
-        </ul>
+      </section>
+      <section class="hero--wedo">
+        <section>
+          <p class="flx"><span class="circle"></span> automatizări porți:</p>
+          <ul>
+            <li>
+              <span class="material-icons">trending_flat</span>
+              batante
+            </li>
+            <li>
+              <span class="material-icons">trending_flat</span>
+              culisante
+            </li>
+            <li>
+              <span class="material-icons">trending_flat</span>
+              autoportante
+            </li>
+          </ul>
+        </section>
+        <section>
+          <p class="flx"><span class="circle"></span> sudăm piese din:</p>
+          <ul>
+            <li>
+              <span class="material-icons">trending_flat</span>
+              inox
+            </li>
+            <li>
+              <span class="material-icons">trending_flat</span>
+              fier
+            </li>
+            <li>
+              <span class="material-icons">trending_flat</span>
+              aluminiu
+            </li>
+          </ul>
+        </section>
       </section>
     </div>
 

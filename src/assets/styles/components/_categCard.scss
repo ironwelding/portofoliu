@@ -25,29 +25,30 @@
             right: 8%;
             transform: rotate(19deg);
         }
-
+        
         &.bottom-left {
             bottom: 10%;
             right: 42%;
             transform: rotate(13deg);
         }
-
+        
         &.bottom-right {
             bottom: 17%;
             right: 20%;
             transform: rotate(3deg);
         }
-
+        
         img {
             width: 100%;
             height: auto;
         }
-
+        
         .description {
             position: absolute;
             @include fullscreen;
             font-size: 2.5em;
             display: grid;
+            text-shadow: 0 0 1px #000;
             place-items: center;
             color: white;
             text-align: center;
@@ -59,12 +60,80 @@
 
         &:hover {
             box-shadow: 0 0 10px rgba(0,0,0,.16);
-            // z-index: 5;
-            // transform: scale(1.2) rotate(0deg);
-            // border-width: 5px;
 
             .description{
                 opacity: 1;
+            }
+        }
+
+        @include media(1200px) {
+            width: 35em;
+            
+            &.top-left {
+                top: calc(15% + 100vw / 1920 * 100);
+                right: 30%;
+            }
+            
+            &.top-right {
+                top: calc(15% + 100vw / 1920 * 100);
+            }
+            
+            &.bottom-left {
+                width: 40em;
+                bottom: calc(10% + 100vw / 1920 * 100);
+                right: 38%;
+            }
+            
+            &.bottom-right {
+                bottom: calc(17% + 100vw / 1920 * 100);
+                right: 10%;
+            }
+        }
+
+        @include media($tablet) {
+            &.top-left {
+                top: 15%;
+            }
+            
+            &.top-right {
+                top: 15%;
+            }
+            
+            &.bottom-left {
+                bottom: 10%;
+            }
+            
+            &.bottom-right {
+                bottom: 17%;
+            }
+        }
+    }
+
+    @include media($phone) {
+        position: relative;
+        margin-bottom: calc(10em + 2px);
+        height: auto;
+
+        .categ-card {
+            position: relative;
+            top: 0!important;
+            right: 0!important;
+            transform: rotate(0deg)!important;
+            width: 100%!important;
+            height: 35em;
+            border-left: none;
+            border-right: none;
+            box-shadow: none;
+
+            img {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .description {
+                opacity: 1;
+                font-size: 3em;
             }
         }
     }

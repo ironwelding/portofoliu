@@ -1,88 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   width="59"
-   height="59"
-   viewBox="0 0 59 59"
-   version="1.1"
-   jetway-hooks="{}"
-   id="svg24"
-   sodipodi:docname="icon-photos.svg"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs28" />
-  <sodipodi:namedview
-     id="namedview26"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     showgrid="false"
-     inkscape:zoom="7.0508475"
-     inkscape:cx="46.873798"
-     inkscape:cy="38.080529"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="g12" />
-  <g
-     jetway-hook-id="D32A0C4D-4437-47B2-A852-7B39F943D3F1"
-     id="g22">
-    <g
-       jetway-hook-id="647A0BE8-6A54-4FD3-92E7-3C0C54A07C51"
-       stroke="none"
-       stroke-width="1"
-       fill="none"
-       fill-rule="evenodd"
-       id="g20">
-      <g
-         jetway-hook-id="4B4991DA-B6A7-4A61-B064-B6BCDC859944"
-         id="g18">
-        <g
-           jetway-hook-id="F7C64F54-09B8-4D6D-9454-F58219AA5601"
-           id="g16">
-          <g
-             jetway-hook-id="45B02426-3A5F-49AF-8232-3C1F09D29D37"
-             id="g14">
-            <path
-               jetway-hook-id="68097562-43CD-4175-BD0F-8131708A2434"
-               d="M-3-3h64v64H-3z"
-               id="path2" />
-            <g
-               jetway-hook-id="DD923623-943A-45E3-8DE8-A4A4B8A7C198"
-               fill-rule="nonzero"
-               id="g12">
-              <path
-                 d="M14.75 13.41c8.146 0 14.75 6.603 14.75 14.75v1.34H1.34C.6 29.5 0 28.9 0 28.16c0-8.147 6.604-14.75 14.75-14.75z"
-                 jetway-hook-id="B4287B30-9B3D-4F6B-9C01-2A7C2CA23D6F"
-                 fill="#FBBC04"
-                 id="path4"
-                 style="fill:#eef9f8;fill-opacity:1.0" />
-              <path
-                 d="M45.59 14.75c0 8.146-6.603 14.75-14.75 14.75H29.5V1.34C29.5.6 30.1 0 30.84 0c8.147 0 14.75 6.604 14.75 14.75z"
-                 jetway-hook-id="5872DD7E-5971-4393-9299-364708D669BC"
-                 fill="#EA4335"
-                 id="path6"
-                 style="fill:#eef9f8;fill-opacity:1" />
-              <path
-                 d="M44.25 45.59c-8.146 0-14.75-6.603-14.75-14.75V29.5h28.16c.74 0 1.34.6 1.34 1.34 0 8.147-6.604 14.75-14.75 14.75z"
-                 jetway-hook-id="184B2279-6FFE-4CA2-B961-54092B122EB8"
-                 fill="#4285F4"
-                 id="path8"
-                 style="fill:#eef9f8;fill-opacity:1" />
-              <path
-                 d="M13.41 44.25c0-8.146 6.603-14.75 14.75-14.75h1.34v28.16c0 .74-.6 1.34-1.34 1.34-8.147 0-14.75-6.604-14.75-14.75z"
-                 jetway-hook-id="2AD9C930-A41C-474E-9152-1E50FC2C457C"
-                 fill="#34A853"
-                 id="path10"
-                 style="fill:#eef9f8;fill-opacity:1" />
+<svg xmlns="http://www.w3.org/2000/svg" width="25.787" height="25.787" viewBox="0 0 25.787 25.787">
+  <g id="icon-photos" transform="translate(3 3)">
+    <g id="Group_22" data-name="Group 22" transform="translate(-3 -3)">
+      <g id="Group_21" data-name="Group 21">
+        <g id="Group_20" data-name="Group 20">
+          <g id="Group_19" data-name="Group 19">
+            <path id="Path_13" data-name="Path 13" d="M-3-3H22.787V22.787H-3Z" transform="translate(3 3)" fill="none" fill-rule="evenodd"/>
+            <g id="Group_18" data-name="Group 18" transform="translate(1.209 1.209)">
+              <path id="Path_14" data-name="Path 14" d="M5.943,13.41a5.943,5.943,0,0,1,5.943,5.943v.54H.54a.54.54,0,0,1-.54-.54A5.943,5.943,0,0,1,5.943,13.41Z" transform="translate(0 -8.007)" fill="#eef9f8"/>
+              <path id="Path_15" data-name="Path 15" d="M35.983,5.943a5.943,5.943,0,0,1-5.943,5.943H29.5V.54A.54.54,0,0,1,30.04,0,5.943,5.943,0,0,1,35.983,5.943Z" transform="translate(-17.614)" fill="#eef9f8"/>
+              <path id="Path_16" data-name="Path 16" d="M35.443,35.983A5.943,5.943,0,0,1,29.5,30.04V29.5H40.846a.54.54,0,0,1,.54.54A5.943,5.943,0,0,1,35.443,35.983Z" transform="translate(-17.614 -17.614)" fill="#eef9f8"/>
+              <path id="Path_17" data-name="Path 17" d="M13.41,35.443A5.943,5.943,0,0,1,19.353,29.5h.54V40.846a.54.54,0,0,1-.54.54A5.943,5.943,0,0,1,13.41,35.443Z" transform="translate(-8.007 -17.614)" fill="#eef9f8"/>
             </g>
           </g>
         </g>
