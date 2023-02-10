@@ -1,0 +1,205 @@
+.home {
+    position: relative;
+    background: $light_01;
+    height: 100vh;
+    overflow-x: hidden;
+
+    .abstract-shape-shadow {
+        filter: drop-shadow(5px 0px 6px rgba(0,0,0,.16));
+        pointer-events: none;
+        user-select: none;
+    }
+    
+    .abstract-shape {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: $primary;
+        clip-path: polygon(0 0, 62% 0, 21% 100%, 0% 100%);
+        pointer-events: none;
+        user-select: none;
+    }
+
+    nav {
+        position: relative;
+        padding: 35px 12em;
+        display: flex;
+        gap: 5em;
+        align-items: center;
+
+        #logo {
+            width: 15em;
+            height: auto;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4em;
+            
+            section {
+                display: flex;
+                justify-content: space-between;
+
+                .info-group {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.4em;
+
+                    &.clickable{
+                        cursor: pointer;
+                    }
+
+                    a{
+                        text-decoration: none;
+                    }
+
+                    p {
+                        font-size: 2em;
+                        color: $light_01;
+                    }
+                }
+            }
+
+        }
+
+        .language-holder {
+            align-self: self-start;
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1.2em;
+
+            span {
+                color: $primary;
+                font-size: 2em;
+                font-weight: 300;
+                cursor: pointer;
+                
+                &.active {
+                    font-size: 2.5em;
+                    font-weight: 500;
+                }
+            }
+
+            .divider {
+                height: 15px;
+                width: 1px;
+                background: $primary;
+            }
+        }
+    }
+
+    .hero-section {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+        padding-left: 12em;     
+        font-family: 'Poppins', sans-serif;
+
+        section {
+            display: flex;
+            flex-direction: column;
+
+            &.gap-1 {
+                gap: 1em;
+            }
+
+            .hero-title {
+                color: $secondary;
+                font-weight: bold;
+                font-size: 7em;
+            }
+
+            .hero-subtitle {
+                color: $light_01;
+                font-size: 2.8em;
+                font-family: 'Dancing Script', cursive;
+            }
+            
+            p {
+                color: $light_01;
+                font-size: 2em;
+                font-weight: 300;
+
+                &.flx {
+                    display: flex;
+                    align-items: center;
+                    gap: 1em;
+                    margin-top: 1em;
+                }
+
+                &.bold {
+                    font-weight: 500;
+                }
+
+                span {
+                    color: $secondary;
+                    font-weight: 500;
+                }
+
+                .circle {
+                    display: inline-block;
+                    border-radius: 50%;
+                    width: 10px;
+                    height: 10px;
+                    background-color: $light_01;
+                    opacity: .5;
+                }
+            }
+
+            ul {
+                padding-left: 3em;
+                display: flex;
+                flex-direction: column;
+                gap: .5em;
+                margin-top: 1em;
+
+                li {
+                    color: #FFF;
+                    font-size: 2em;
+                    font-weight: 300;
+                    display: flex;
+                    align-items: center;
+                    gap: .5em;
+                }
+            }
+        }
+
+    }
+
+    .social-media-container {
+        position: absolute;
+        bottom: 35px;
+        right: 12em;
+        display: flex;
+
+        .social-media {
+            display: grid;
+            place-items: center;
+            width: 7em;
+            height: 7em;
+            position: relative;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+            img {
+                height: 30%;
+                transition: all .3s ease-in-out;
+            }
+
+            &:hover {
+                margin-top: -5px;
+                box-shadow: 0px 15px 15px rgba(0,0,0,.16);
+
+                img {
+                    height: 40%;
+                }
+            }
+        }
+    }
+}
