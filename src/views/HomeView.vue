@@ -77,6 +77,15 @@
       </section>
     </div>
 
+    <div class="cards-container">
+      <router-link v-for="card in categories" :key="card.clasa" :to="card.route">
+        <div class="categ-card" :class="card.clasa" >
+          <img :src="card.img">
+          <div class="description">{{ card.text }}</div>
+        </div>
+      </router-link>
+    </div>
+
     <div class="social-media-container">
       <a :href="cont.url" v-for="cont in contact" :key="cont.background" :target="cont.target">
         <div class="social-media" :style="{'background':cont.background}">
@@ -94,6 +103,12 @@ import facebookIcon from '@/assets/icons/icon-facebook.svg'
 import callIcon from '@/assets/icons/icon-call.svg'
 import locationIcon from '@/assets/icons/icon-location.svg'
 import yahooIcon from '@/assets/icons/icon-yahoo.svg'
+import photosIcon from '@/assets/icons/icon-photos.svg'
+
+import terraceImg from '@/assets/img/terrace.jpg'
+import stairsImg from '@/assets/img/stairs.jpg'
+import ornamentalImg from '@/assets/img/ornamental.jpg'
+import fencesImg from '@/assets/img/fences.jpg'
 
 const locatieArmatura = 'https://www.google.com/maps/place/Arm%C4%83tura/@46.7870017,23.5818298,15z/data=!4m16!1m9!3m8!1s0x47490ea53279393b:0x42e40dbc022a794c!2sStrada+G%C4%83rii+19,+Cluj-Napoca+400394,+Romania!3b1!8m2!3d46.7870017!4d23.5905845!10e5!16s%2Fg%2F11c2fx2b4z!3m5!1s0x47490ea57bfc7bff:0xb7da6c68e1ec322b!8m2!3d46.7870017!4d23.5905845!16s%2Fg%2F1tffy8m_'
 
@@ -121,8 +136,41 @@ const contact = ref([
     icon: locationIcon,
     background: "#88A3A5",
     target: '_blank'
+  },
+  {
+    url: "https://photos.google.com/share/AF1QipMJELjODHUCFAjV_l1qde2wbWHTJp6WwnQODWo4uMuKnkC_1wxv8MxjNNkGWZH0hg?key=eDhWMHNJM0FfTmR0QW1RdnRhMWpQVVl1TzVtTlFR",
+    icon: photosIcon,
+    background: "#7A9395",
+    target: '_blank'
   }
 ])
+
+const categories = [
+  {
+    img: terraceImg,
+    text: 'Terase & copertine',
+    clasa: 'top-left',
+    route: '/terraces'
+  },
+  {
+    img: stairsImg,
+    text: 'Balustrade & scări',
+    clasa: 'top-right',
+    route: '/stairs'
+  },
+  {
+    img: fencesImg,
+    text: 'Porți & garduri',
+    clasa: 'bottom-left',
+    route: '/fences'
+  },
+  {
+    img: ornamentalImg,
+    text: 'Confecții',
+    clasa: 'bottom-right',
+    route: '/confections'
+  },
+]
 
 const seeLocationOnMap = () =>{ window.open(locatieArmatura, '_blanc') }
 

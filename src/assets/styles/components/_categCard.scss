@@ -1,0 +1,71 @@
+.cards-container {
+    position: absolute;
+    pointer-events: none;
+    @include fullscreen;
+    
+    .categ-card {
+        position: absolute;
+        border-radius: 2px;
+        border: 2px solid #FFF;
+        width: 31.5em;
+        overflow: hidden;
+        transform-origin: center;
+        box-shadow: 20px 20px 20px rgba(0,0,0,.16);
+        transition: all .3s ease-in-out;
+        pointer-events: all;
+
+        &.top-left {
+            top: 15%;
+            right: 28%;
+            transform: rotate(-17deg);
+        }
+
+        &.top-right {
+            top: 15%;
+            right: 8%;
+            transform: rotate(19deg);
+        }
+
+        &.bottom-left {
+            bottom: 10%;
+            right: 42%;
+            transform: rotate(13deg);
+        }
+
+        &.bottom-right {
+            bottom: 17%;
+            right: 20%;
+            transform: rotate(3deg);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .description {
+            position: absolute;
+            @include fullscreen;
+            font-size: 2.5em;
+            display: grid;
+            place-items: center;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: rgba(13, 126, 134, 0.5);
+            opacity: 0;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px rgba(0,0,0,.16);
+            // z-index: 5;
+            // transform: scale(1.2) rotate(0deg);
+            // border-width: 5px;
+
+            .description{
+                opacity: 1;
+            }
+        }
+    }
+}
