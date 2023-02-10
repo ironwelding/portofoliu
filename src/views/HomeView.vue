@@ -158,25 +158,25 @@ const categories = [
     img: terraceImg,
     text: 'Terase & copertine',
     clasa: 'top-left',
-    route: '/terraces'
+    route: '/category/terraces'
   },
   {
     img: stairsImg,
     text: 'Balustrade & scări',
     clasa: 'top-right',
-    route: '/stairs'
+    route: '/category/stairs'
   },
   {
     img: fencesImg,
     text: 'Porți & garduri',
     clasa: 'bottom-left',
-    route: '/fences'
+    route: '/category/fences'
   },
   {
     img: ornamentalImg,
     text: 'Confecții',
     clasa: 'bottom-right',
-    route: '/confections'
+    route: '/category/confections'
   },
 ]
 
