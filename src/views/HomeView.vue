@@ -143,7 +143,7 @@ const contact = ref([
     target: '_self'
   },
   {
-    url: "tel:+40372659700",
+    url: "tel:+40750732132",
     icon: callIcon,
     background: "#8FABAB",
     target: '_self'
