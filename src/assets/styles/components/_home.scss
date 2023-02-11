@@ -274,11 +274,8 @@
 
             section {
                 &.hero--wedo {
-                    flex-direction: row;
-
-                    section {
-                        flex-grow: 1;
-                    }
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
                 }
 
                 .hero-title {
@@ -315,7 +312,6 @@
                 }
 
                 ul {
-                    padding-left: 0;
                     align-items: center;
                     margin-top: 3em;
                     margin-bottom: 5em;
