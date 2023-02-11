@@ -17,7 +17,7 @@
           </div>
           <div class="info-group">
             <span class="material-icons">phone</span>
-            <a href='tel:+40750732132'><p>0750 732 123</p></a>
+            <a href='tel:+40750732132'><p>0750 732 132</p></a>
           </div>
         </section>
         <section>
