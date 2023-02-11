@@ -13,7 +13,7 @@
         <section>
           <div class="info-group">
             <span class="material-icons">schedule</span>
-            <p>L-V, 08:00 - 18:00</p>
+            <p>{{ isRo() ? 'L-V' : 'M-F' }}, 08:00 - 18:00</p>
           </div>
           <div class="info-group">
             <span class="material-icons">phone</span>
@@ -23,62 +23,62 @@
         <section>
           <div class="info-group clickable" @click="seeLocationOnMap">
             <span class="material-icons">location_on</span>
-            <p>Strada Gării 19, Cluj-Napoca, Romania</p>
+            <p>{{ isRo() ? 'Strada Gării 19' : '19th Gării Street' }}, Cluj-Napoca, Romania</p>
           </div>
         </section>
       </div>
 
       <div class="language-holder">
-        <span class="lang">EN</span>
+        <span class="lang" :class="!isRo() ? 'active' :''" @click="changeLanguage">EN</span>
         <div class="divider"></div>
-        <span class="lang active">RO</span>
+        <span class="lang" :class="isRo() ? 'active' :''" @click="changeLanguage">RO</span>
       </div>
     </nav>
 
     <div class="hero-section">
       <section>
         <h1 class="hero-title">IRON WELDING</h1>
-        <h3 class="hero-subtitle"><span>pentru</span> noi metalul este doar o plastilină, îl modelăm cum vrem</h3>
+        <h3 class="hero-subtitle"><span>{{ isRo() ? 'pentru' : 'for' }}</span> {{ isRo() ? 'noi metalul este doar o plastilină, îl modelăm cum vrem' : 'us the metal is just a plasticine, we model it as we want' }}</h3>
       </section>
       <section class="gap-1">
-        <p>Suntem <span>experți</span> în meșteșugul metalului</p>
-        <p>Executăm confecții metalice și în străinătate</p>
+        <p>{{ isRo() ? 'Suntem' : 'We are' }} <span>{{ isRo() ? 'experți' : 'experts' }}</span> {{ isRo() ? 'în meșteșugul metalului' : 'in metal craft' }}</p>
+        <p>{{ isRo() ? 'Executăm confecții metalice și în străinătate' : 'We also carry out metal fabrications abroad' }}</p>
       </section>
       <section>
-        <p class="bold">Ne ocupăm cu:</p>
+        <p class="bold">{{ isRo() ? 'Ne ocupăm cu:' : 'We deal with' }}</p>
       </section>
       <section class="hero--wedo">
         <section>
-          <p class="flx"><span class="circle"></span> automatizări porți:</p>
+          <p class="flx"><span class="circle"></span> {{ isRo() ? 'automatizări porți:' : 'gate automations' }}</p>
           <ul>
             <li>
               <span class="material-icons">trending_flat</span>
-              batante
+              {{ isRo() ? 'batante' : 'swing' }}
             </li>
             <li>
               <span class="material-icons">trending_flat</span>
-              culisante
+              {{ isRo() ? 'culisante' : 'sliding' }}
             </li>
             <li>
               <span class="material-icons">trending_flat</span>
-              autoportante
+              {{ isRo() ? 'autoportante' : 'autoport' }}
             </li>
           </ul>
         </section>
         <section>
-          <p class="flx"><span class="circle"></span> sudăm piese din:</p>
+          <p class="flx"><span class="circle"></span> {{isRo() ? 'sudăm piese din:' : 'we weld parts from'}}</p>
           <ul>
             <li>
               <span class="material-icons">trending_flat</span>
-              inox
+              {{ isRo() ? 'inox' : 'stainless steel' }}
             </li>
             <li>
               <span class="material-icons">trending_flat</span>
-              fier
+              {{ isRo() ? 'fier' : 'iron' }}
             </li>
             <li>
               <span class="material-icons">trending_flat</span>
-              aluminiu
+              {{ isRo() ? 'aluminiu' : 'aluminum' }}
             </li>
           </ul>
         </section>
@@ -105,7 +105,7 @@
 </template>
 
 <script setup>
-import { ref } from '@vue/reactivity'
+import { reactive, ref } from '@vue/reactivity'
 
 import facebookIcon from '@/assets/icons/icon-facebook.svg'
 import callIcon from '@/assets/icons/icon-call.svg'
@@ -117,6 +117,15 @@ import terraceImg from '@/assets/img/terrace.jpg'
 import stairsImg from '@/assets/img/stairs.jpg'
 import ornamentalImg from '@/assets/img/ornamental.jpg'
 import fencesImg from '@/assets/img/fences.jpg'
+
+
+let language = 'RO'
+
+if(localStorage.getItem('lang')){
+  language = localStorage.getItem('lang')
+}
+
+const isRo = () => language === 'RO'
 
 const locatieArmatura = 'https://www.google.com/maps/place/Arm%C4%83tura/@46.7870017,23.5818298,15z/data=!4m16!1m9!3m8!1s0x47490ea53279393b:0x42e40dbc022a794c!2sStrada+G%C4%83rii+19,+Cluj-Napoca+400394,+Romania!3b1!8m2!3d46.7870017!4d23.5905845!10e5!16s%2Fg%2F11c2fx2b4z!3m5!1s0x47490ea57bfc7bff:0xb7da6c68e1ec322b!8m2!3d46.7870017!4d23.5905845!16s%2Fg%2F1tffy8m_'
 
@@ -153,34 +162,43 @@ const contact = ref([
   }
 ])
 
-const categories = [
+const categories = reactive([
   {
     img: terraceImg,
-    text: 'Terase & copertine',
+    text: isRo() ? 'Terase & copertine' : 'Terraces & canopies',
     clasa: 'top-left',
     route: '/category/terraces'
   },
   {
     img: stairsImg,
-    text: 'Balustrade & scări',
+    text: isRo() ? 'Balustrade & scări' : 'Railings & stairs',
     clasa: 'top-right',
     route: '/category/stairs'
   },
   {
     img: fencesImg,
-    text: 'Porți & garduri',
+    text: isRo() ? 'Porți & garduri' : 'Gates & fences',
     clasa: 'bottom-left',
     route: '/category/fences'
   },
   {
     img: ornamentalImg,
-    text: 'Confecții',
+    text: isRo() ? 'Confecții' : 'Fabrications',
     clasa: 'bottom-right',
     route: '/category/confections'
   },
-]
+])
 
 const seeLocationOnMap = () =>{ window.open(locatieArmatura, '_blanc') }
 
+const changeLanguage = (event) => {
+  const langElements = document.querySelectorAll(".lang")
+  langElements.forEach(lang => { lang.classList.remove('active') })
+  event.target.classList.add('active')
+  if(event.target.innerText !== language){
+    localStorage.setItem('lang', event.target.innerText)
+    location.reload()
+  }
+}
 
 </script>
